@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TriviaTI</string>
+    <string name="welcome_headline">Vamos a jugar!</string>
+    <string name="welcome_subtitle">Pon a prueba tus conocimientos informáticos</string>
+    <string name="play_now">Jugar Ahora!</string>
+    <string name="about">Sobre el proyecto</string>
 </resources>
