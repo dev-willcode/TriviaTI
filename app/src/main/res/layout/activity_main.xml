@@ -62,6 +62,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/nunito_bold"
+            android:paddingStart="35dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="35dp"
+            android:paddingBottom="15dp"
             android:text="@string/play_now"
             android:textSize="16sp"
             app:backgroundTint="@color/purple_200"
@@ -72,12 +76,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_bold"
+            android:paddingStart="35dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="35dp"
+            android:paddingBottom="15dp"
             android:text="@string/about"
             android:textSize="16sp"
-            app:cornerRadius="10dp"
             app:backgroundTint="@color/transparent"
+            app:cornerRadius="10dp"
             app:strokeColor="@color/purple_200"
-            app:strokeWidth="2dp"/>
+            app:strokeWidth="2dp" />
 
 
     </LinearLayout>

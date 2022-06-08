@@ -4,4 +4,7 @@
     <string name="welcome_subtitle">Pon a prueba tus conocimientos informáticos</string>
     <string name="play_now">Jugar Ahora!</string>
     <string name="about">Sobre el proyecto</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next_quiz_button">Última palabra!</string>
 </resources>
