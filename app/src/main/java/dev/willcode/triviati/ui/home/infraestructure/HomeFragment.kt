@@ -26,7 +26,7 @@ class HomeFragment : Fragment() {
 
     private fun configFragmentView(root: View) {
         binding.buttonPlay.setOnClickListener {
-            val action = HomeFragmentDirections.openQuiz(1)
+            val action = HomeFragmentDirections.openQuiz()
             root.findNavController().navigate(action)
         }
     }

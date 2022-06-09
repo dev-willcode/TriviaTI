@@ -19,8 +19,5 @@
         android:name="dev.willcode.triviati.ui.quiz.infraestructure.QuizFragment"
         android:label="fragment_quiz"
         tools:layout="@layout/fragment_quiz" >
-        <argument
-            android:name="quizId"
-            app:argType="integer" />
     </fragment>
 </navigation>
