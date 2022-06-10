@@ -31,4 +31,8 @@ class QuizViewModel : ViewModel() {
         }
         selectItem(quizzes[index])
     }
+
+    fun getCorrectQuestions(): Int {
+        return quizIndex - 1
+    }
 }

@@ -54,4 +54,8 @@ class AnswerQuizAdapter : RecyclerView.Adapter<AnswerQuizHolder>() {
             notifyItemChanged(dataSet.indexOf(selectedAnswer))
         }
     }
+
+    fun getSelectedAnswer():QuizAnswer? {
+        return selectedAnswer
+    }
 }

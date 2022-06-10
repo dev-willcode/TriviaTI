@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/purple_700"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="dev.willcode.triviati.ui.wonGame.infraestructure.WonGameFragment">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -19,19 +19,20 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/nunito_bold"
         android:gravity="center"
         android:text="@string/you_are_winner"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:layout_marginBottom="20dp"
         android:textSize="20sp" />
 
-    <ImageView
+    <pl.droidsonroids.gif.GifImageView
+        android:src="@drawable/winner"
         android:layout_width="wrap_content"
         android:layout_height="220dp"
-        android:src="@drawable/winner"
-        android:contentDescription="@string/app_name" />
+        android:contentDescription="@string/app_name"
+         />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/confirmButton"
@@ -40,7 +41,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/nunito_bold"
-        android:onClick="playGame"
         android:paddingStart="35dp"
         android:paddingTop="15dp"
         android:paddingEnd="35dp"

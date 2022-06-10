@@ -11,9 +11,4 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main)
     }
-
-    fun playGame(view: View) {
-        val action = HomeFragmentDirections.openQuiz()
-        view.findNavController().navigate(action)
-    }
 }

@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dev.willcode.triviati.databinding.FragmentQuizBinding
 import dev.willcode.triviati.ui.quiz.application.QuizViewModel
@@ -26,27 +28,48 @@ class QuizFragment : Fragment() {
     ): View {
         binding = FragmentQuizBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        configFragmentView()
+        configFragmentView(root)
         return root
     }
 
-    private fun configFragmentView() {
+    private fun configFragmentView(root: View) {
         setupQuiz()
         setupAdapter()
         setupRecyclerAnswer()
         binding.confirmButton.setOnClickListener {
-            if (viewModel.existNextQuiz()) {
-                viewModel.selectNextQuiz()
+            val answer = adapter.getSelectedAnswer()
+            if (answer === null) {
+                Toast.makeText(
+                    context,
+                    "Primero selecciona una respuesta!",
+                    Toast.LENGTH_SHORT
+                )
+                    .show()
             } else {
-                finishGame()
+                if (answer.correct) {
+                    continueGame(root)
+                } else {
+                    lostGame(root)
+                }
             }
         }
         // set first quiz question
         viewModel.selectNextQuiz()
     }
 
-    private fun finishGame() {
-        // move to finish fragment
+    private fun lostGame(root: View) {
+        val action = QuizFragmentDirections.goLostGame(viewModel.getCorrectQuestions())
+        root.findNavController().navigate(action)
+    }
+
+    private fun wonGame(root: View) {
+        val action = QuizFragmentDirections.goWonGame()
+        root.findNavController().navigate(action)
+    }
+
+    private fun continueGame(root: View) {
+        if (viewModel.existNextQuiz()) viewModel.selectNextQuiz()
+        else wonGame(root)
     }
 
     private fun setupQuiz() {

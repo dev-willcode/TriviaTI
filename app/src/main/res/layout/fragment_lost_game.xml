@@ -7,7 +7,7 @@
     android:background="@color/purple_700"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="dev.willcode.triviati.ui.lostGame.infraestructure.LostGameFragment">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -16,12 +16,13 @@
         android:contentDescription="@string/app_name"
         android:src="@drawable/quiz" />
 
-    <ImageView
+    <pl.droidsonroids.gif.GifImageView
+        android:src="@drawable/looser"
         android:layout_width="wrap_content"
         android:layout_height="220dp"
         android:layout_marginBottom="20dp"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/looser" />
+         />
 
     <TextView
         android:layout_width="match_parent"
@@ -78,7 +79,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/nunito_bold"
-        android:onClick="playGame"
         android:paddingStart="35dp"
         android:paddingTop="15dp"
         android:paddingEnd="35dp"

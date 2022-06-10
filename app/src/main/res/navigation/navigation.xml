@@ -19,5 +19,30 @@
         android:name="dev.willcode.triviati.ui.quiz.infraestructure.QuizFragment"
         android:label="fragment_quiz"
         tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/goLostGame"
+            app:destination="@id/lostGameFragment" />
+        <action
+            android:id="@+id/goWonGame"
+            app:destination="@id/wonGameFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/lostGameFragment"
+        android:name="dev.willcode.triviati.ui.lostGame.infraestructure.LostGameFragment"
+        android:label="LostGameFragment" >
+        <action
+            android:id="@+id/playAgain"
+            app:destination="@id/quizFragment" />
+        <argument
+            android:name="correctQuestions"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/wonGameFragment2"
+        android:name="dev.willcode.triviati.ui.wonGame.infraestructure.WonGameFragment"
+        android:label="WonGameFragment" >
+        <action
+            android:id="@+id/playAgain"
+            app:destination="@id/quizFragment" />
     </fragment>
 </navigation>
