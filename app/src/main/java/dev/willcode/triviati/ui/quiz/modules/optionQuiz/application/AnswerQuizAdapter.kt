@@ -11,12 +11,16 @@ class AnswerQuizAdapter : RecyclerView.Adapter<AnswerQuizHolder>() {
     private lateinit var clickListener: OnOptionQuizClickListener
 
     interface OnOptionQuizClickListener {
-        fun onItemClick(dataSet: ArrayList<QuizAnswer>, position: Int)
+        fun onItemClick(item: QuizAnswer, position: Int)
     }
 
-    fun setOptionQuizList(dataSet: List<QuizAnswer>) {
-        this.dataSet.addAll(dataSet)
-        notifyItemRangeInserted(this.dataSet.size, this.dataSet.size + dataSet.size - 1)
+    fun setOptionQuizList(quizzes: List<QuizAnswer>) {
+        val previousDataSetSize = dataSet.size
+        dataSet.clear()
+        notifyItemRangeRemoved(0, previousDataSetSize)
+        dataSet.addAll(quizzes)
+        notifyItemRangeInserted(0, quizzes.size)
+
     }
 
     fun setOnOptionQuizClickListener(listener: OnOptionQuizClickListener) {
@@ -34,4 +38,19 @@ class AnswerQuizAdapter : RecyclerView.Adapter<AnswerQuizHolder>() {
     )
 
     override fun getItemCount() = dataSet.size
+
+    fun checkAnswer(answer: QuizAnswer) {
+        if (!answer.checked) {
+            answer.checked = true
+        }
+    }
+
+    fun uncheckDifferentAnswer(answer: QuizAnswer) {
+        val position = dataSet.indexOf(answer)
+        for ((index, value) in dataSet.withIndex()) {
+            if (index != position) {
+                value.checked = false
+            }
+        }
+    }
 }

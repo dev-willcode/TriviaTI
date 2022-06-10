@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/willy/AndroidStudioProjects/TriviaTI/app/src/main/res/drawable/rounded_button.xml" value="0.3635" />
+        <entry key="..\:/Users/willy/AndroidStudioProjects/TriviaTI/app/src/main/res/drawable/rounded_button_hint.xml" value="0.3565" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/TriviaTI/app/src/main/res/drawable/rounded_corners_button.xml" value="0.3645" />
+        <entry key="..\:/Users/willy/AndroidStudioProjects/TriviaTI/app/src/main/res/drawable/rounded_corners_button_stroke.xml" value="0.251" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/TriviaTI/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/TriviaTI/app/src/main/res/layout/activity_quiz.xml" value="0.36354166666666665" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/TriviaTI/app/src/main/res/layout/content_main.xml" value="0.18645833333333334" />
