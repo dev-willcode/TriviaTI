@@ -7,4 +7,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="next_quiz_button">Última palabra!</string>
+    <string name="next_time_message">Mejor suerte la proxima vez!</string>
+    <string name="game_stats">Resumen de juego:</string>
+    <string name="correct_questions">Preguntas correctas:</string>
+    <string name="play_again">Probar otra vez!</string>
+    <string name="you_are_winner">Haz ganado, felicidades!</string>
 </resources>
