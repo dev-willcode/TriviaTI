@@ -9,6 +9,7 @@ import dev.willcode.triviati.databinding.FragmentAnswerQuizBinding
 class AnswerQuizAdapter : RecyclerView.Adapter<AnswerQuizHolder>() {
     private val dataSet: ArrayList<QuizAnswer> = ArrayList()
     private lateinit var clickListener: OnOptionQuizClickListener
+    private var selectedAnswer: QuizAnswer? = null
 
     interface OnOptionQuizClickListener {
         fun onItemClick(item: QuizAnswer, position: Int)
@@ -40,17 +41,17 @@ class AnswerQuizAdapter : RecyclerView.Adapter<AnswerQuizHolder>() {
     override fun getItemCount() = dataSet.size
 
     fun checkAnswer(answer: QuizAnswer) {
+        selectedAnswer = answer
         if (!answer.checked) {
             answer.checked = true
+            notifyItemChanged(dataSet.indexOf(answer))
         }
     }
 
-    fun uncheckDifferentAnswer(answer: QuizAnswer) {
-        val position = dataSet.indexOf(answer)
-        for ((index, value) in dataSet.withIndex()) {
-            if (index != position) {
-                value.checked = false
-            }
+    fun uncheckPreviousSelectedAnswer() {
+        if (selectedAnswer !== null) {
+            selectedAnswer?.checked = false
+            notifyItemChanged(dataSet.indexOf(selectedAnswer))
         }
     }
 }

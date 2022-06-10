@@ -64,9 +64,8 @@ class QuizFragment : Fragment() {
     private fun setupAdapter() {
         adapter.setOnOptionQuizClickListener(object : AnswerQuizAdapter.OnOptionQuizClickListener {
             override fun onItemClick(item: QuizAnswer, position: Int) {
+                adapter.uncheckPreviousSelectedAnswer()
                 adapter.checkAnswer(item)
-                adapter.uncheckDifferentAnswer(item)
-                adapter.notifyItemRangeChanged(0,adapter.itemCount)
             }
         })
     }
