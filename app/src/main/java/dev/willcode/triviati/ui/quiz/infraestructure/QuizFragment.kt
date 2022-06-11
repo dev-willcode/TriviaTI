@@ -21,6 +21,7 @@ class QuizFragment : Fragment() {
     private val viewModel: QuizViewModel by viewModels()
     private val adapter = AnswerQuizAdapter()
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -46,11 +47,9 @@ class QuizFragment : Fragment() {
                 )
                     .show()
             } else {
-                if (answer.correct) {
-                    continueGame(root)
-                } else {
-                    lostGame(root)
-                }
+                if (answer.correct) continueGame(root)
+                else lostGame(root)
+
             }
         }
         // set first quiz question
