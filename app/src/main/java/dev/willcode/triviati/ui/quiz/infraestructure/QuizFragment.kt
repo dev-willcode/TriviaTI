@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.ads.AdRequest
 import dev.willcode.triviati.databinding.FragmentQuizBinding
 import dev.willcode.triviati.ui.quiz.application.QuizViewModel
 import dev.willcode.triviati.ui.quiz.modules.optionQuiz.application.AnswerQuizAdapter
@@ -34,6 +35,7 @@ class QuizFragment : Fragment() {
     }
 
     private fun configFragmentView(root: View) {
+        setupAds()
         setupQuiz()
         setupAdapter()
         setupRecyclerAnswer()
@@ -54,6 +56,11 @@ class QuizFragment : Fragment() {
         }
         // set first quiz question
         viewModel.selectNextQuiz()
+    }
+
+    private fun setupAds() {
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
     }
 
     private fun lostGame(root: View) {
