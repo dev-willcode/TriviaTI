@@ -1,22 +1,130 @@
 [
   {
     "id": 1,
-    "question": "hola!",
+    "question": "Las palabras \"Hello world!\" en un programa son..",
     "answers": [
       {
         "id": 1,
-        "question": "hola 1",
+        "question": "palabras sin sentido.",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "question": "las primeras palabras de bienvenida al mundo de la programación.",
+        "correct": true
+      },
+      {
+        "id": 3,
+        "question": "parte de la sintaxis de python.",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "question": "un saludo muy formal.",
         "correct": false
       }
     ]
   },
   {
     "id": 2,
-    "question": "hola 2!",
+    "question": "Un amperímetro es una herramienta que..",
     "answers": [
       {
         "id": 1,
-        "question": "hola 2",
+        "question": "sirve para medir la densidad del agua.",
+        "correct": false
+      },
+      {
+        "id": 2,
+        "question": "sirve para medir la intensidad de corriente.",
+        "correct": true
+      },
+      {
+        "id": 3,
+        "question": "sirve para medir voltaje.",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "question": "sirve para medir continuidad.",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Un software es ...",
+    "answers": [
+      {
+        "id": 1,
+        "question": "un conjunto de instrucciones que interpreta el ordenador.",
+        "correct": true
+      },
+      {
+        "id": 2,
+        "question": "un conjunto de tarjetas perforadas.",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "question": "conjunto de bytes ordenados.",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "question": "el motivo por el cual Bill Gates es millonario.",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "La arquitectura de von Neumann, es un modelo arquitectónico que dio origen a...",
+    "answers": [
+      {
+        "id": 1,
+        "question": "la aparición de los ordenadores modernos.",
+        "correct": true
+      },
+      {
+        "id": 2,
+        "question": "la aparición de software mantenible y escalable.",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "question": "la aparición de tarjetas de video.",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "question": "la construcción de edificios impresionantes.",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "El silicio es un material natural cuyas propiedades eléctricas sirvieron de base para crear..",
+    "answers": [
+      {
+        "id": 1,
+        "question": "los transistores.",
+        "correct": true
+      },
+      {
+        "id": 2,
+        "question": "los transformadores.",
+        "correct": false
+      },
+      {
+        "id": 3,
+        "question": "los microprocesadores.",
+        "correct": false
+      },
+      {
+        "id": 4,
+        "question": "los PC Gaming.",
         "correct": false
       }
     ]
