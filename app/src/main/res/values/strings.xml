@@ -17,7 +17,6 @@
     <string name="start_level">Level 1</string>
     <string name="next_level">Next Level</string>
     <string name="level_text">Level %1$d</string>
-    <!--    ads values-->
-    <string name="BannerAdId">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="AdSessionID">ca-app-pub-3996219913975188~9032785200</string>
+    <string name="AppAdsID">ca-app-pub-3996219913975188~9032785200</string>
+    <string name="BannerAdsId">ca-app-pub-3996219913975188/2028393158</string>
 </resources>
