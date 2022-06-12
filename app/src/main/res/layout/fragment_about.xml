@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/purple_900"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     android:paddingStart="20dp"
     android:paddingEnd="20dp"
-    android:orientation="vertical"
     tools:context=".ui.about.infraestructure.AboutFragment">
 
     <ImageView
         android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/icon" />
 
     <TextView
@@ -20,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Sobre el proyecto"
+        android:text="@string/about_proyect"
         android:textColor="@color/white"
         android:textSize="20sp" />
 
@@ -28,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_light"
-        android:text="Proyecto práctico para la asignatura de Digital Business 2021-1"
+        android:text="@string/about_proyect_description"
         android:textColor="@color/white"
         android:textSize="18sp" />
 
@@ -37,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Autores"
+        android:text="@string/authors"
         android:textColor="@color/white"
         android:textSize="20sp" />
 
@@ -45,5 +46,22 @@
         android:id="@+id/authorRecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/resources"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_light"
+        android:text="@string/resources_description"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
 </LinearLayout>
