@@ -29,5 +29,9 @@ class HomeFragment : Fragment() {
             val action = HomeFragmentDirections.openQuiz()
             root.findNavController().navigate(action)
         }
+        binding.buttonAbout.setOnClickListener {
+            val action = HomeFragmentDirections.openAbout()
+            root.findNavController().navigate(action)
+        }
     }
 }

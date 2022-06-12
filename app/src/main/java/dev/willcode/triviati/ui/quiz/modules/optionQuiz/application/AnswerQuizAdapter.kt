@@ -55,7 +55,7 @@ class AnswerQuizAdapter : RecyclerView.Adapter<AnswerQuizHolder>() {
         }
     }
 
-    fun getSelectedAnswer():QuizAnswer? {
+    fun getSelectedAnswer(): QuizAnswer? {
         return selectedAnswer
     }
 }

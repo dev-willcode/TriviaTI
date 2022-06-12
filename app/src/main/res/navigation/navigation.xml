@@ -13,6 +13,9 @@
             app:destination="@id/quizFragment"
             app:enterAnim="@android:anim/fade_in"
             app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/openAbout"
+            app:destination="@id/aboutFragment" />
     </fragment>
     <fragment
         android:id="@+id/quizFragment"
@@ -51,4 +54,8 @@
             android:id="@+id/goHome"
             app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="dev.willcode.triviati.ui.about.infraestructure.AboutFragment"
+        android:label="AboutFragment" />
 </navigation>

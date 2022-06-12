@@ -17,9 +17,9 @@ class AnswerQuizHolder(
         configureSelectListener(listener)
     }
 
-    fun bind(item: QuizAnswer) {
-        binding.answerText.text = item.question
-        if (item.checked) {
+    fun bind(answer: QuizAnswer) {
+        binding.answerText.text = answer.question
+        if (answer.checked) {
             binding.answerIcon.setImageDrawable(
                 ResourcesCompat.getDrawable(
                     itemView.resources,
@@ -36,7 +36,7 @@ class AnswerQuizHolder(
                 itemView.resources,
                 R.drawable.rounded_corners_button,
                 null
-            );
+            )
         } else {
             binding.answerIcon.setImageDrawable(
                 ResourcesCompat.getDrawable(
@@ -54,7 +54,7 @@ class AnswerQuizHolder(
                 itemView.resources,
                 R.drawable.rounded_corners_button_stroke,
                 null
-            );
+            )
         }
     }
 

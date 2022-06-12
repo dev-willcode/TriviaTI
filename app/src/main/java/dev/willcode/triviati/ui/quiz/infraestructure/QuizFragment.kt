@@ -72,7 +72,7 @@ class QuizFragment : Fragment() {
     }
 
     private fun setupQuiz() {
-        viewModel.setQuizzes(repository.getRandomQuizzes())
+        viewModel.setQuizzes(repository.getRandomQuizzes(context))
         bindQuizData()
     }
 
